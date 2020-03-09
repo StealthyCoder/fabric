@@ -999,7 +999,6 @@ func createChaincodeServer(coreConfig *peer.Config, ca tlsgen.CA, peerHostname s
 	// set the logger for the server
 	config.Logger = flogging.MustGetLogger("core.comm").With("server", "ChaincodeServer")
 
-
 	// Chaincode keepalive options - static for now
 	chaincodeKeepaliveOptions := comm.KeepaliveOptions{
 		ServerInterval:    time.Duration(2) * time.Hour,    // 2 hours - gRPC default
